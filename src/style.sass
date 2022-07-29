@@ -1,0 +1,70 @@
+.assignmentsTable
+  width: 100%
+  max-width: 1200px
+  table-layout: fixed
+  margin-top: 20px
+  th,
+  td
+    border: 1px solid #bbb
+    &:nth-child(1),
+    &:nth-child(2)
+      width: auto
+    &:nth-child(3)
+      width: 165px
+    &:nth-child(4)
+      width: 100px
+    &:nth-child(5)
+      width: 90px
+    &:nth-child(6)
+      width: 30px
+  thead
+    user-select: none
+    tr:first-child
+      height: 1rem
+      th
+        position: relative
+        &:nth-child(4)
+          text-align: left
+          span
+            margin-left: 2px
+        &:nth-child(5)
+          text-align: left
+          span
+            margin-left: 6px
+        svg
+          position: absolute
+          right: 3px
+          top: 50%
+          &.asc
+            transform: translateY(-50%) rotate(180deg)
+          &.desc
+            transform: translateY(-50%)
+    tr:last-child
+      th
+        height: 35px
+        .textColumnFilterInput,
+        .selectColumnFilterSelect
+          display: block
+          width: 100%
+          border-width: 0
+          height: 100%
+          margin-bottom: 0
+          padding: 0
+        .datepicker
+          text-align: left
+          &.to span
+            margin-left: 10px
+  tbody
+    tr
+      cursor: pointer
+      &.noData
+        cursor: auto
+        text-align: center
+      &.highlighted td
+        color: red
+      td
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        &:nth-child(6)
+          text-align: center

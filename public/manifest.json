@@ -1,0 +1,23 @@
+{
+  "name": "Keio Tracker",
+  "description": "K-LMSのトップページに課題一覧を追加する",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://lms.keio.jp/"],
+      "js": ["index.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["index.css"],
+      "matches": ["https://lms.keio.jp/*"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
